@@ -17,6 +17,21 @@ public class CustomQueue implements Queue {
         }
     }
 
+//    public void enqueue(String value, int priority) {
+//
+//        Node toInsert = new Node(value, priority);
+//        if (head == null) head = toInsert;
+//        else {
+//            Node current = head;
+//
+//            if (current.getPriority() > toInsert.getPriority())
+//            while (current.getNextNode() != null) {
+//                current = current.getNextNode();
+//            }
+//            current.setNextNode(toInsert);
+//        }
+//    }
+
     @Override
     public String peek() throws Exception {
 

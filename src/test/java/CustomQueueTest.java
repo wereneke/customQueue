@@ -5,14 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class CustomQueueTest {
 
     @Test
-    void testEnqueueOnEmpty() {
+    void testEnqueueOnEmpty() throws Exception{
         CustomQueue queue = new CustomQueue();
         queue.enqueue("wera");
         assertEquals("wera", queue.peek());
     }
 
     @Test
-    void testDequeue() {
+    void testDequeue() throws Exception {
         CustomQueue queue = new CustomQueue();
         queue.enqueue("wera");
         queue.enqueue("kuba");
@@ -21,7 +21,7 @@ class CustomQueueTest {
     }
 
     @Test
-    void testIfEnqueueSetsRelations() {
+    void testIfEnqueueSetsRelations() throws Exception {
         CustomQueue queue = new CustomQueue();
         queue.enqueue("wera");
         queue.enqueue("kuba");
