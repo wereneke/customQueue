@@ -1,7 +1,7 @@
 public interface Queue {
 
     void enqueue (String value);
-    String peek();
-    String dequeue();
+    String peek() throws Exception;
+    String dequeue() throws Exception;
 
 }

@@ -18,15 +18,41 @@ public class CustomQueue implements Queue {
     }
 
     @Override
-    public String peek() {
+    public String peek() throws Exception {
+
+        if (isEmpty()) throw new Exception();
         return head.getValue();
     }
 
     @Override
-    public String dequeue() {
+    public String dequeue() throws Exception {
+
+        if (isEmpty()) throw new Exception();
 
         String returnal = head.getValue();
         head = head.getNextNode();
         return returnal;
     }
+
+
+    public int queueSize() {
+
+        int size = 0;
+        if (isEmpty()) return size;
+
+        Node current = head;
+        size = 1;
+        while (current.getNextNode() != null) {
+            current = current.getNextNode();
+            size++;
+        }
+
+        return size;
+    }
+
+    public boolean isEmpty() {
+
+        return (head == null);
+    }
+
 }

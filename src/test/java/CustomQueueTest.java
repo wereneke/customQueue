@@ -31,4 +31,21 @@ class CustomQueueTest {
         queue.dequeue();
         assertEquals("robert", queue.peek());
     }
+
+    @Test
+    void testSizeOnEmpty() {
+        CustomQueue queue = new CustomQueue();
+        assertEquals(0, queue.queueSize());
+    }
+
+    @Test
+    void testSizeOnNonEmpty() {
+        CustomQueue queue = new CustomQueue();
+        queue.enqueue("wera");
+        queue.enqueue("kuba");
+        queue.enqueue("robert");
+        queue.enqueue("zenonek");
+        assertEquals(4, queue.queueSize());
+
+    }
 }
